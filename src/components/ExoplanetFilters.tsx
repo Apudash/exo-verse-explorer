@@ -23,9 +23,9 @@ export const ExoplanetFilters = ({
   const resetFilters = () => {
     onFiltersChange({
       search: '',
-      yearRange: [1995, 2024],
+      yearRange: [1992, 2025], // ✅ updated
       discoveryMethod: 'all',
-      sizeRange: [0, 10],
+      sizeRange: [0, 100], // ✅ updated
       mission: 'all'
     });
   };
@@ -110,8 +110,6 @@ export const ExoplanetFilters = ({
             </Select>
           </div>
 
-
-
           {/* Discovery Year Range */}
           <div className="space-y-3">
             <label className="text-sm font-medium">
@@ -122,14 +120,14 @@ export const ExoplanetFilters = ({
               onValueChange={(value) => 
                 onFiltersChange({ ...filters, yearRange: value as [number, number] })
               }
-              min={1995}
-              max={2024}
+              min={1992} // ✅ updated
+              max={2025}
               step={1}
               className="w-full"
             />
             <div className="flex justify-between text-xs text-muted-foreground">
-              <span>1995</span>
-              <span>2024</span>
+              <span>1992</span>
+              <span>2025</span>
             </div>
           </div>
 
@@ -144,13 +142,13 @@ export const ExoplanetFilters = ({
                 onFiltersChange({ ...filters, sizeRange: value as [number, number] })
               }
               min={0}
-              max={10}
+              max={100} // ✅ updated
               step={0.1}
               className="w-full"
             />
             <div className="flex justify-between text-xs text-muted-foreground">
               <span>0 R⊕</span>
-              <span>10 R⊕</span>
+              <span>100 R⊕</span>
             </div>
           </div>
         </CardContent>

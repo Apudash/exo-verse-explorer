@@ -19,9 +19,9 @@ export const ExoplanetList = ({ exoplanets, loading, error, searchQuery, onRetry
   const [selectedPlanet, setSelectedPlanet] = useState<ExoplanetData | null>(null);
   const [filters, setFilters] = useState<FilterType>({
     search: searchQuery,
-    yearRange: [1995, 2024],
+    yearRange: [1995, 2025],
     discoveryMethod: 'all',
-    sizeRange: [0, 10],
+    sizeRange: [0, 1000],
     mission: 'all'
   });
 

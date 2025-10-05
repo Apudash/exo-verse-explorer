@@ -23,9 +23,9 @@ export const ExoplanetFilters = ({
   const resetFilters = () => {
     onFiltersChange({
       search: '',
-      yearRange: [1992, 2025], // ✅ updated
+      yearRange: [1992, 2025], 
       discoveryMethod: 'all',
-      sizeRange: [0, 100], // ✅ updated
+      sizeRange: [0, 100], 
       mission: 'all'
     });
   };
@@ -120,7 +120,7 @@ export const ExoplanetFilters = ({
               onValueChange={(value) => 
                 onFiltersChange({ ...filters, yearRange: value as [number, number] })
               }
-              min={1992} // ✅ updated
+              min={1992} 
               max={2025}
               step={1}
               className="w-full"
@@ -142,7 +142,7 @@ export const ExoplanetFilters = ({
                 onFiltersChange({ ...filters, sizeRange: value as [number, number] })
               }
               min={0}
-              max={100} // ✅ updated
+              max={100} 
               step={0.1}
               className="w-full"
             />
